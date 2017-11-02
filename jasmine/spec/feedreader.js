@@ -106,10 +106,9 @@ $(function () {
                 loadFeed(feedId, done);
             });
             
-            it('loadFeed worked', function (done) {
+            it('loadFeed worked', function () {
                 expect(title.text()).toEqual(allFeeds[feedId].name);
                 expect($('.entry', container).length).not.toBe(0);
-                done();
             });
         });
         
@@ -137,10 +136,9 @@ $(function () {
                 });
             });
             
-            it('content refresh', function (done) {
+            it('content refresh', function () {
                 expect(title.text()).toEqual(allFeeds[feedIdOther].name);
                 expect($('.entry', container).length).not.toBe(0);
-                done();
             });
         });
     });
