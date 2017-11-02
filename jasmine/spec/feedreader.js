@@ -59,7 +59,7 @@ $(function () {
         */
         it('is hidden by default', function () {
             expect($('.slide-menu').length).toBeTruthy();
-            expect($('body').hasClass('menu-hidden')).toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
         
         /* TODO:
@@ -71,9 +71,9 @@ $(function () {
             var menuIcon = $('.menu-icon-link');
             expect(menuIcon.length).toBeTruthy();
             menuIcon.click();
-            expect($('body').hasClass('menu-hidden')).toBeFalsy();
+            expect($('body').hasClass('menu-hidden')).toBe(false);
             menuIcon.click();
-            expect($('body').hasClass('menu-hidden')).toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
     });
 
